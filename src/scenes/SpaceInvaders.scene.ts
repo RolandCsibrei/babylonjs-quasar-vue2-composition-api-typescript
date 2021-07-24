@@ -8,7 +8,7 @@ import {
   Vector3
 } from '@babylonjs/core';
 
-export class SpaceInvadersScene {
+export class MyScene {
   _scene: Scene;
   _engine: Engine;
 
@@ -22,7 +22,6 @@ export class SpaceInvadersScene {
   }
 
   public initScene(cameraControlCanvas?: HTMLCanvasElement) {
-    // setting up a basic scene
     const camera = new FreeCamera(
       'camera1',
       new Vector3(0, 5, -10),

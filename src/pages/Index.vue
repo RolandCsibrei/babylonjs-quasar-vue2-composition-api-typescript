@@ -13,7 +13,7 @@ import {
   ref
 } from '@vue/composition-api';
 
-import { SpaceInvadersScene } from 'src/scenes/SpaceInvaders.scene';
+import { MyScene } from 'src/scenes/SpaceInvaders.scene';
 
 export default defineComponent({
   name: 'PageIndex',
@@ -22,10 +22,10 @@ export default defineComponent({
     let engine: Engine;
     onMounted(() => {
       if (bjsCanvas?.value) {
-        const spaceInvadersScene = new SpaceInvadersScene(bjsCanvas.value);
-        engine = spaceInvadersScene.getEngine();
-        spaceInvadersScene.initScene();
-        spaceInvadersScene.startScene();
+        const myScene = new MyScene(bjsCanvas.value);
+        engine = myScene.getEngine();
+        myScene.initScene();
+        myScene.startScene();
 
         window.addEventListener('resize', onWindowResize);
       }
